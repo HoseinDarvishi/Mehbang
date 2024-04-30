@@ -17,8 +17,7 @@ namespace MB.Api.Controllers
 
         [HttpGet("[action]/{personId:int}")]
         [MapToApiVersion("1.0")]
-
-        public async Task<IActionResult> GetTransactionsReport(int personId , CancellationToken ct)
+        public async Task<IActionResult> GetTransactionsReport(int personId , CancellationToken ct )
         {
             var trs = await _transactionService.GetTransactionsAsync(personId, ct);
             return Ok(trs);
@@ -26,7 +25,6 @@ namespace MB.Api.Controllers
 
         [HttpGet("[action]")]
         [MapToApiVersion("1.0")]
-
         public async Task<IActionResult> GetTransactionsReport(CancellationToken ct)
         {
             var trs = await _transactionService.GetTransactionsAsync(ct);
@@ -35,7 +33,6 @@ namespace MB.Api.Controllers
 
         [HttpGet("[action]")]
         [MapToApiVersion("1.0")]
-
         public async Task<IActionResult> GetMaxBuyer(CancellationToken ct)
         {
             var trs = await _transactionService.GetMaxBuyerAsync(ct);
@@ -44,9 +41,11 @@ namespace MB.Api.Controllers
 
         [HttpGet("[action]")]
         [MapToApiVersion("1.0")]
-        public async Task<IActionResult> GetMaxBuyerInDate(string startDate , string endDate , CancellationToken ct)
+        public async Task<IActionResult> GetMaxBuyerInDate([FromQuery]PeriodDateDto period , CancellationToken ct)
         {
-            var period = new PeriodDateDto { Start_Date = startDate, End_Date = endDate };
+            if (!ModelState.IsValid)
+                return BadRequest(period);
+
             var trs = await _transactionService.GetMaxBuyerAsync(period,ct);
             return Ok(trs);
         }

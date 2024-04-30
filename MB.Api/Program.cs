@@ -1,3 +1,4 @@
+using MB.Api.Middlewares;
 using MB.Configuration;
 using Microsoft.AspNetCore.Mvc;
 
@@ -36,5 +37,7 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.UseExceptionHandlingMiddleware();
 
 app.Run();

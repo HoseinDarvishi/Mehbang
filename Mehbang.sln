@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MB.Contracts", "MB.Applicat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MB.Configuration", "MB.Configuration\MB.Configuration.csproj", "{B9846878-AF1C-4CB2-8CCD-392F64F23590}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MB.Domain.Abstract", "MB.Domain.Abstract\MB.Domain.Abstract.csproj", "{53E4B420-22F5-4D5B-85E7-6D67E663C30D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MB.Domain.Abstract", "MB.Domain.Abstract\MB.Domain.Abstract.csproj", "{53E4B420-22F5-4D5B-85E7-6D67E663C30D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MB.Tests", "MB.Tests\MB.Tests.csproj", "{66CA5C74-92F1-4862-93A6-132921E0D983}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{53E4B420-22F5-4D5B-85E7-6D67E663C30D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53E4B420-22F5-4D5B-85E7-6D67E663C30D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53E4B420-22F5-4D5B-85E7-6D67E663C30D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66CA5C74-92F1-4862-93A6-132921E0D983}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66CA5C74-92F1-4862-93A6-132921E0D983}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66CA5C74-92F1-4862-93A6-132921E0D983}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66CA5C74-92F1-4862-93A6-132921E0D983}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
