@@ -42,7 +42,7 @@ namespace MB.Api.Controllers
         [HttpGet("[action]")]
         [MapToApiVersion("1.0")]
         public async Task<IActionResult> GetMaxBuyerInDate([FromQuery]PeriodDateDto period , CancellationToken ct)
-        {
+         {
             if (!ModelState.IsValid)
                 return BadRequest(period);
 
